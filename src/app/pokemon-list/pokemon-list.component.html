@@ -1,0 +1,10 @@
+<ng-container *ngIf="noDataAvailable()">
+  <p>
+    No Items to display...
+  </p>
+</ng-container>
+<div class="container" *ngIf="result()?.length">
+  <ng-container *ngFor="let item of result()">
+    <app-pokemon-card [data]="item" />
+  </ng-container>
+</div>
