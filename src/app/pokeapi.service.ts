@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http'
 import { toSignal } from "@angular/core/rxjs-interop";
 import { CustomPokemon, PokeAPIResponse, Pokemon, Result } from './pokeapi';
 import { catchError, combineLatest, map, of, switchMap } from 'rxjs';
+import { environment } from "src/environments/environment";
 
 @Injectable()
 export class PokeapiService {
   httpService = inject(HttpClient);
-  private url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=40';
+  private url = environment.POKE_URI;
   private defaultPokeApiResponse: CustomPokemon[] = []
 
   getAll(){
