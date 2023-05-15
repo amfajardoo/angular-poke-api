@@ -1,0 +1,6 @@
+<div class="pokemon-card" *ngIf="data" (click)="seePokemonDetails()">
+  <h3 class="pokemon-name">{{ data.name }}</h3>
+  <div class="img-container">
+    <img [ngSrc]="data.url" width="120" height="120" class="img-front-default">
+  </div>
+</div>
