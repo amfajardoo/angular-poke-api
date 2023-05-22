@@ -5,7 +5,7 @@ import { CustomPokemon, PokeAPIResponse, Pokemon, Result } from './poke-api.inte
 import { catchError, combineLatest, map, of, switchMap } from 'rxjs';
 import { environment } from "src/environments/environment";
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class PokeApiService {
   httpService = inject(HttpClient);
   private url = environment.POKE_URI;

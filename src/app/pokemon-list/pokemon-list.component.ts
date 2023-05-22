@@ -8,6 +8,7 @@ import { PokeApiService } from '../poke-api.service';
   selector: 'app-pokemon-list',
   standalone: true,
   imports: [CommonModule, HttpClientModule, PokemonCardComponent],
+  providers: [PokeApiService],
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.scss']
 })
