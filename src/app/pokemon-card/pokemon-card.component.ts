@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, NgOptimizedImage],
   templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.scss']
+  styleUrls: ['./pokemon-card.component.scss'],
 })
 export class PokemonCardComponent {
   @Input({ required: true }) data?: Result;
   router = inject(Router);
 
-
   seePokemonDetails() {
-    this.router.navigateByUrl(`pokemon/${this.data?.name}`)
+    this.router.navigateByUrl(`pokemon/${this.data?.name}`);
   }
 }

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pokemon-detail.component.html',
-  styleUrls: ['./pokemon-detail.component.scss']
+  styleUrls: ['./pokemon-detail.component.scss'],
 })
 export class PokemonDetailComponent {
   @Input({ required: true }) id?: string;

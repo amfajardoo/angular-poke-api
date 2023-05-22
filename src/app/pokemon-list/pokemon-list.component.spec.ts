@@ -12,8 +12,13 @@ describe('PokemonListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CommonModule, HttpClientModule, PokemonCardComponent, PokemonListComponent],
-      providers: [PokeApiService]
+      imports: [
+        CommonModule,
+        HttpClientModule,
+        PokemonCardComponent,
+        PokemonListComponent,
+      ],
+      providers: [PokeApiService],
     });
     fixture = TestBed.createComponent(PokemonListComponent);
     component = fixture.componentInstance;

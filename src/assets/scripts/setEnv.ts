@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* tslint:disable */
 // @ts-nocheck
 const { writeFile, existsSync, mkdirSync } = require('fs');
@@ -14,7 +16,6 @@ function writeFileUsingFS(targetPath, environmentFileContent) {
   });
 }
 
-
 // Providing path to the `environments` directory
 const envDirectory = './src/environments';
 
@@ -22,12 +23,12 @@ const envDirectory = './src/environments';
 if (!existsSync(envDirectory)) {
   mkdirSync(envDirectory);
 }
-// list of environments 
+// list of environments
 const environments = ['', '.prod'];
 // choose the correct targetPath based on the environment chosen
 const targetPath = './src/environments/environment';
-environments.forEach(env => {
-  const ENV = env === '' ? 'dev' : env.replace('.', '')
+environments.forEach((env) => {
+  const ENV = env === '' ? 'dev' : env.replace('.', '');
   // creates the `environment.*.ts` and `environment.ts` file if it does not exist
   writeFileUsingFS(`${targetPath}${env}.ts`, '');
   //actual content to be compiled dynamically and pasted into respective environment files

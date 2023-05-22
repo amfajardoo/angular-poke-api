@@ -10,7 +10,7 @@ import { PokeApiService } from '../poke-api.service';
   imports: [CommonModule, HttpClientModule, PokemonCardComponent],
   providers: [PokeApiService],
   templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.scss']
+  styleUrls: ['./pokemon-list.component.scss'],
 })
 export class PokemonListComponent {
   pokeApiService = inject(PokeApiService);

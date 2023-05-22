@@ -8,7 +8,7 @@ describe('PokemonCardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [PokemonCardComponent]
+      imports: [PokemonCardComponent],
     });
     fixture = TestBed.createComponent(PokemonCardComponent);
     component = fixture.componentInstance;

@@ -5,10 +5,10 @@ import { PokemonListComponent } from './pokemon-list';
 export const routes: Routes = [
   {
     path: '',
-    component: PokemonListComponent
+    component: PokemonListComponent,
   },
   {
     path: 'pokemon/:id',
     component: PokemonDetailComponent,
-  }
+  },
 ];
