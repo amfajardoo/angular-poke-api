@@ -1,6 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Result } from '../pokeapi';
+import { Result } from '../poke-api.interface';
 import { Router } from '@angular/router';
 
 @Component({
